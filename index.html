@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="./swiper-bundle.min.css">
+  <script src="./swiper.min.js"></script>
+  <style>
+    .swiper-container{
+      border: 1px solid red;
+      width: 1140px;
+    }
+  </style>
+
+</head>
+<body>
+
+
+<div class="swiper-container">
+  <div class="swiper-wrapper">
+    <!-- Slides -->
+    <div class="swiper-slide" style="display: flex;justify-content: center;align-items: center">
+      <img src="./1.png" alt="" style="width: 285px;height: 160px;object-fit: cover;">
+    </div>
+    <div class="swiper-slide" style="display: flex;justify-content: center;align-items: center">
+      <img src="./2.png" alt="" style="width: 285px;height: 160px;object-fit: cover;">
+
+    </div>
+    <div class="swiper-slide" style="display: flex;justify-content: center;align-items: center">
+      <img src="./3.png" alt="" style="width: 285px;height: 160px;object-fit: cover;">
+    </div>
+
+    <div class="swiper-slide" style="display: flex;justify-content: center;align-items: center">
+      <img src="./4.png" alt="" style="width: 285px;height: 160px;object-fit: cover;">
+
+    </div>
+
+    <div class="swiper-slide" style="display: flex;justify-content: center;align-items: center">
+      <img src="./5.png" alt="" style="width: 285px;height: 160px;object-fit: cover;">
+
+    </div>
+    <div class="swiper-slide" style="display: flex;justify-content: center;align-items: center">
+      <img src="./6.png" alt="" style="width: 285px;height: 160px;object-fit: cover;">
+
+    </div>
+    
+  </div>
+  <button class="banner-pre">前一个</button>
+
+  <button class="banner-next">后一个</button>
+</div>
+
+<script>
+  
+	var mySwiper = new Swiper('.swiper-container', {
+	  direction: 'horizontal', // 垂直切换选项
+	  loop: true, // 循环模式选项
+	  spaceBetween : 10,
+	  slidesPerView : 4,
+	  slidesPerGroup : 4,
+
+	  autoplay: {
+		  delay: 3000,
+		  stopOnLastSlide: false,
+		  disableOnInteraction: false,
+	  },
+
+		// 如果需要前进后退按钮
+		navigation: {
+			nextEl: '.banner-next',
+			prevEl: '.banner-pre',
+		},
+
+	});
+</script>
+
+</body>
+</html>
